@@ -40,26 +40,26 @@ No real training happens in Phase 0 -- the mock trainer records what would be tr
 ```mermaid
 flowchart TD
     subgraph TSK[Task Corpus]
-        P[Frozen proposer<br/>future API; mock in Phase 0]
-        TR[Public train examples<br/>reward split]
-        HO[Private held-out examples<br/>evaluation split]
-        REF[Reference solution<br/>proposer/generated audit target]
+        P["Frozen proposer<br/>future API; mock in Phase 0"]
+        TR["Public train examples<br/>reward split"]
+        HO["Private held-out examples<br/>evaluation split"]
+        REF["Reference solution<br/>proposer/generated audit target"]
         P --> TR
         P --> HO
         P --> REF
     end
 
     subgraph ROLL[Solver Rollouts]
-        S[Small solver model<br/>mock lookup table in Phase 0]
-        K[k sampled Python functions<br/>def solve(...)]
+        S["Small solver model<br/>mock lookup table in Phase 0"]
+        K["k sampled Python functions<br/>def solve(...)"]
         S --> K
     end
 
     subgraph VERIFY[Execution and Verification]
-        SB[Subprocess sandbox<br/>prototype isolation only]
-        CTA[Checker A on train split<br/>reward signal]
-        CEA[Checker A on held-out split<br/>support-set eval]
-        CB[Checker B on held-out split<br/>independent audit]
+        SB["Subprocess sandbox<br/>prototype isolation only"]
+        CTA["Checker A on train split<br/>reward signal"]
+        CEA["Checker A on held-out split<br/>support-set eval"]
+        CB["Checker B on held-out split<br/>independent audit"]
         K --> SB
         TR --> CTA
         HO --> CEA
@@ -70,9 +70,9 @@ flowchart TD
     end
 
     subgraph TRAIN[Training Arms]
-        RW[Rewards<br/>verified, random, format, diversity]
-        ARM[Arm config<br/>vanilla, self-play, ProRL, STaR/ReST, controls]
-        MT[Mock trainer<br/>GRPO + LoRA placeholder]
+        RW["Rewards<br/>verified, random, format, diversity"]
+        ARM["Arm config<br/>vanilla, self-play, ProRL, STaR/ReST, controls"]
+        MT["Mock trainer<br/>GRPO + LoRA placeholder"]
         CTA --> RW
         ARM --> RW
         RW --> MT
@@ -80,10 +80,10 @@ flowchart TD
     end
 
     subgraph MEASURE[Measurement]
-        PK[pass@k estimator<br/>Chen et al.]
-        SS[Support-set classifier<br/>gained/lost/sharpened/unchanged]
-        LD[Ledger<br/>task x round x arm rows]
-        NB[Claims-gated notebook<br/>local render, human review]
+        PK["pass@k estimator<br/>Chen et al."]
+        SS["Support-set classifier<br/>gained/lost/sharpened/unchanged"]
+        LD["Ledger<br/>task x round x arm rows"]
+        NB["Claims-gated notebook<br/>local render, human review"]
         CEA --> PK
         CEA --> SS
         CB --> SS
