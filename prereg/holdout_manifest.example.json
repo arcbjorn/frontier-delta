@@ -1,0 +1,19 @@
+{
+  "name": "example_holdout_manifest",
+  "version": "0.0.1",
+  "created_by": "frontier-delta",
+  "datasets": [
+    {
+      "domain": "python_program_induction",
+      "split": "heldout",
+      "content_hash": "sha256:replace-with-real-hash",
+      "num_tasks": 0
+    }
+  ],
+  "access_policy": {
+    "open_once": true,
+    "checker_b_only": true,
+    "log_every_access": true
+  }
+}
+
