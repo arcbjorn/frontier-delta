@@ -1,0 +1,61 @@
+# arkestra
+.agent-out/
+.worktrees/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.uv-cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Packaging/build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local experiment outputs
+runs/
+outputs/
+artifacts/
+checkpoints/
+wandb/
+mlruns/
+*.sqlite
+*.sqlite3
+*.db
+
+# Model/training artifacts
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.gguf
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
