@@ -1,0 +1,7 @@
+arm:
+  name: library_random
+  reward: verified
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  library_mode: random
+  notes: Control arm that tests whether any library-shaped context helps.

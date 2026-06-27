@@ -1,0 +1,7 @@
+arm:
+  name: format_only
+  reward: format_only
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  notes: Detects learning to satisfy syntax or harness format only.
+

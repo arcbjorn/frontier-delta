@@ -1,0 +1,7 @@
+arm:
+  name: matched_frontier_token_distillation
+  reward: none
+  trainer: supervised_lora
+  proposer: frontier_task_proposer
+  notes: Controls for capability imported through frontier-model tokens.
+

@@ -1,0 +1,7 @@
+arm:
+  name: library_frozen
+  reward: verified
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  library_mode: frozen
+  notes: Control arm that keeps any shared function library fixed.

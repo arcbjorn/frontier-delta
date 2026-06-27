@@ -1,0 +1,7 @@
+arm:
+  name: star_self
+  reward: verified_filter
+  trainer: supervised_lora
+  proposer: frontier_task_proposer
+  notes: STaR/ReST baseline using only the model's own verified samples.
+

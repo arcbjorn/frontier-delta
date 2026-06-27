@@ -1,0 +1,8 @@
+arm:
+  name: vanilla_rlvr
+  reward: verified
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  diversity_bonus: false
+  prolonged_rl: false
+  notes: Baseline RLVR arm using public training examples for reward.

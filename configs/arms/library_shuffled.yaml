@@ -1,0 +1,7 @@
+arm:
+  name: library_shuffled
+  reward: verified
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  library_mode: shuffled
+  notes: Control arm that preserves library size but breaks semantic structure.

@@ -1,0 +1,9 @@
+arm:
+  name: prolonged_rl
+  reward: verified
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  diversity_bonus: false
+  prolonged_rl: true
+  notes: ProRL-style extended optimization after apparent reward saturation.
+

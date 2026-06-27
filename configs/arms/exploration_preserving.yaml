@@ -1,0 +1,8 @@
+arm:
+  name: exploration_preserving
+  reward: verified_plus_diversity
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  diversity_bonus: true
+  notes: SAGE/BBG/Pass@k Training style arm to resist entropy collapse.
+

@@ -1,0 +1,8 @@
+arm:
+  name: main_selfplay
+  reward: verified
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  diversity_bonus: false
+  prolonged_rl: false
+

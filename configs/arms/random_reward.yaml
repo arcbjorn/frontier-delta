@@ -1,0 +1,8 @@
+arm:
+  name: random_reward
+  reward: random
+  trainer: grpo_lora
+  proposer: frontier_task_proposer
+  seed: 42
+  notes: Detects spurious improvement under uninformative reward.
+

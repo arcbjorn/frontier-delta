@@ -1,0 +1,8 @@
+arm:
+  name: no_frontier_replay
+  reward: verified
+  trainer: grpo_lora
+  proposer: none
+  replay_source: solver_only
+  diversity_bonus: false
+  notes: Control arm that removes frontier-proposed replay data.
