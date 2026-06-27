@@ -1,0 +1,29 @@
+project:
+  name: frontier-delta
+  seed: 42
+
+model:
+  student: qwen3-4b-base
+  adapter: lora
+  rollout_backend: vllm
+
+tasks:
+  domain: python_program_induction
+  train_examples: 5
+  heldout_examples: 5
+  target_success_band:
+    min: 0.3
+    max: 0.7
+
+evaluation:
+  pass_k: [1, 8, 64, 256, 1024]
+  samples_per_problem: 1024
+  solvable_threshold: 0.95
+  unsolvable_threshold: 0.05
+  checker_a: training_checker
+  checker_b: audit_checker
+
+logging:
+  ledger_path: runs/ledger.jsonl
+  notebook_db: runs/notebook.sqlite
+
